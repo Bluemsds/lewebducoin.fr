@@ -85,6 +85,7 @@ p+p{margin-top:.8em}
 .projet{overflow:hidden;padding:0;display:flex;flex-direction:column}
 .projet .visuel{aspect-ratio:16/10;background:linear-gradient(135deg,#2a2a44,#3b2356);display:grid;place-items:center;color:var(--lilas);font-family:"Fredoka";font-size:1.5rem;text-align:center;padding:20px}
 .projet .visuel img{width:100%;height:100%;object-fit:cover;object-position:top}
+.projet .visuel:has(img){padding:0}
 .projet .txt{padding:22px 24px 26px;flex:1;display:flex;flex-direction:column}
 .projet .tag{font-size:.8rem;font-weight:700;color:var(--violet);text-transform:uppercase;letter-spacing:.08em}
 .projet .txt a{margin-top:auto;padding-top:12px;font-weight:700}
