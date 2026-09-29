@@ -1,0 +1,119 @@
+/* Le Web du Coin — feuille de style */
+@font-face{font-family:"Fredoka";src:url("../fonts/fredoka-600.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Nunito";src:url("../fonts/nunito-400.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Nunito";src:url("../fonts/nunito-700.woff2") format("woff2");font-weight:700;font-display:swap}
+
+:root{
+  --nuit:#12121E; --nuit-2:#1A1A2B; --nuit-3:#24243A;
+  --violet:#C06BE0; --violet-fonce:#8E44C9; --lilas:#E3C8F2;
+  --pave:#9A9AA6; --texte:#EEEDF4; --texte-doux:#B9B7C9;
+  --rayon:18px; --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--nuit);color:var(--texte);font-family:"Nunito",system-ui,sans-serif;font-size:17px;line-height:1.65}
+img{max-width:100%;display:block}
+a{color:var(--lilas)}
+h1,h2,h3{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;line-height:1.15;color:#fff}
+h1{font-size:clamp(2.1rem,5vw,3.4rem)}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:.6em}
+h3{font-size:1.3rem;margin-bottom:.4em}
+p+p{margin-top:.8em}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+.section{padding:80px 0}
+.section.alt{background:var(--nuit-2)}
+.eyebrow{font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;color:var(--violet);margin-bottom:.6em}
+.lead{font-size:1.15rem;color:var(--texte-doux);max-width:62ch}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+
+/* En-tête */
+.header{position:sticky;top:0;z-index:50;background:rgba(18,18,30,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--nuit-3)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-family:"Fredoka";font-size:1.35rem}
+.brand img{width:46px;height:auto}
+.nav{display:flex;gap:26px;list-style:none}
+.nav a{color:var(--texte);text-decoration:none;font-weight:700;font-size:.97rem}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--violet)}
+.nav-toggle{display:none;background:none;border:1px solid var(--nuit-3);color:#fff;border-radius:10px;padding:8px 12px;font:inherit;cursor:pointer}
+@media (max-width:820px){
+  .nav-toggle{display:block}
+  .nav{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;gap:0;background:var(--nuit-2);border-bottom:1px solid var(--nuit-3)}
+  .nav.open{display:flex}
+  .nav a{display:block;padding:16px 20px;border-top:1px solid var(--nuit-3)}
+}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(90deg,var(--violet-fonce),var(--violet));color:#fff;box-shadow:0 8px 24px rgba(192,107,224,.3)}
+.btn-ghost{border:2px solid var(--violet);color:#fff}
+.btn-wa{background:#25D366;color:#0b2b17}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+
+/* Bannière d'accueil */
+.hero-img{background:#0c0c14;position:relative}
+.hero-img img{width:100%;height:auto}
+@media (min-width:821px){.hero-img img{max-height:72vh;object-fit:cover}}
+.hero-img::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10%;background:linear-gradient(180deg,transparent,var(--nuit))}
+.hero{padding:30px 0 70px}
+.hero p:not(.eyebrow){font-size:1.2rem;color:var(--texte-doux);max-width:58ch;margin-top:14px}
+.page-hero{padding:70px 0 40px;background:radial-gradient(ellipse at 20% 0%,rgba(192,107,224,.18),transparent 60%)}
+
+/* Cartes */
+.grid{display:grid;gap:24px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(400px,100%),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--nuit-2);border:1px solid var(--nuit-3);border-radius:var(--rayon);padding:28px}
+.section.alt .card{background:var(--nuit)}
+.card .icon{font-size:1.8rem;margin-bottom:10px}
+.steps{counter-reset:s}
+.steps .card h3::before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:34px;height:34px;margin-right:10px;border-radius:50%;background:var(--violet);color:var(--nuit);font-size:1rem}
+
+/* Offres */
+.offre{display:flex;flex-direction:column}
+.offre.vedette{border:2px solid var(--violet);box-shadow:0 10px 40px rgba(192,107,224,.18)}
+.badge{align-self:flex-start;background:var(--violet);color:var(--nuit);font-weight:700;font-size:.78rem;padding:4px 12px;border-radius:999px;margin-bottom:12px}
+.prix{font-family:"Fredoka";font-size:2.2rem;color:#fff;margin:6px 0 2px}
+.prix small{font-family:"Nunito";font-size:.95rem;color:var(--texte-doux);font-weight:400}
+.offre ul{list-style:none;margin:16px 0 24px;flex:1}
+.offre li{padding:7px 0 7px 28px;position:relative;border-bottom:1px dashed var(--nuit-3)}
+.offre li::before{content:"";position:absolute;left:4px;top:15px;width:10px;height:10px;background:var(--violet);border-radius:2px}
+.encart{background:linear-gradient(90deg,rgba(142,68,201,.25),rgba(192,107,224,.12));border:1px solid var(--violet);border-radius:var(--rayon);padding:26px 28px;margin-top:34px}
+
+/* Réalisations */
+.projet{overflow:hidden;padding:0;display:flex;flex-direction:column}
+.projet .visuel{aspect-ratio:16/10;background:linear-gradient(135deg,#2a2a44,#3b2356);display:grid;place-items:center;color:var(--lilas);font-family:"Fredoka";font-size:1.5rem;text-align:center;padding:20px}
+.projet .visuel img{width:100%;height:100%;object-fit:cover;object-position:top}
+.projet .txt{padding:22px 24px 26px;flex:1;display:flex;flex-direction:column}
+.projet .tag{font-size:.8rem;font-weight:700;color:var(--violet);text-transform:uppercase;letter-spacing:.08em}
+.projet .txt a{margin-top:auto;padding-top:12px;font-weight:700}
+
+/* À propos */
+.apropos{display:grid;grid-template-columns:1fr 1.4fr;gap:50px;align-items:center}
+@media (max-width:820px){.apropos{grid-template-columns:1fr}}
+
+/* Contact */
+.contact-list{list-style:none;display:grid;gap:14px;margin-top:20px}
+.contact-list a{display:flex;align-items:center;gap:14px;padding:18px 22px;background:var(--nuit-2);border:1px solid var(--nuit-3);border-radius:var(--rayon);text-decoration:none;color:#fff;font-weight:700;font-size:1.1rem}
+.contact-list a:hover{border-color:var(--violet)}
+.contact-list span{font-size:1.5rem}
+.contact-list small{display:block;font-weight:400;color:var(--texte-doux);font-size:.9rem}
+
+/* Bandeau d'appel à l'action */
+.cta{text-align:center;padding:70px 20px;background:radial-gradient(ellipse at center,rgba(192,107,224,.22),transparent 70%)}
+.cta .btns{justify-content:center}
+
+/* Pied de page */
+.footer{border-top:1px solid var(--nuit-3);padding:40px 0;font-size:.92rem;color:var(--texte-doux)}
+.footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+.footer a{color:var(--texte-doux)}
+
+/* Bouton d'appel flottant (mobile) */
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;display:none;width:58px;height:58px;border-radius:50%;background:#25D366;color:#0b2b17;font-size:1.6rem;text-decoration:none;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+@media (max-width:820px){.fab{display:grid}}
+
+.legal h2{font-size:1.4rem;margin-top:1.6em}
+.legal p,.legal li{color:var(--texte-doux)}
+.legal ul{margin:.6em 0 0 1.2em}
+.a-completer{background:#5a2a2a;color:#ffd7d7;padding:0 6px;border-radius:4px}
