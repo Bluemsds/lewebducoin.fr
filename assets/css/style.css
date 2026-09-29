@@ -12,7 +12,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--nuit);color:var(--texte);font-family:"Nunito",system-ui,sans-serif;font-size:17px;line-height:1.65}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:var(--lilas)}
 h1,h2,h3{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;line-height:1.15;color:#fff}
 h1{font-size:clamp(2.1rem,5vw,3.4rem)}
@@ -54,7 +54,6 @@ p+p{margin-top:.8em}
 .hero-img{background:#0c0c14;position:relative}
 .hero-img img{width:100%;height:auto}
 @media (min-width:821px){.hero-img img{max-height:72vh;object-fit:cover}}
-.hero-img::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10%;background:linear-gradient(180deg,transparent,var(--nuit))}
 .hero{padding:30px 0 70px}
 .hero p:not(.eyebrow){font-size:1.2rem;color:var(--texte-doux);max-width:58ch;margin-top:14px}
 .page-hero{padding:70px 0 40px;background:radial-gradient(ellipse at 20% 0%,rgba(192,107,224,.18),transparent 60%)}
