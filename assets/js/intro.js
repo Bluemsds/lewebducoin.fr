@@ -16,6 +16,8 @@
   };
   if (reduce || seen) { box.remove(); document.documentElement.classList.remove('intro-on'); document.dispatchEvent(new Event('intro:done')); return; }
   box.querySelector('.intro-skip').addEventListener('click', done);
+  // Sécurité : quoi qu'il arrive, le site s'affiche au bout de 9 secondes
+  setTimeout(done, 9000);
   addEventListener('keydown', e => { if (e.key === 'Escape') done(); }, { once: true });
 
   const cv = box.querySelector('canvas'), ctx = cv.getContext('2d');
