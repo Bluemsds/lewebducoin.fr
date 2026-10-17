@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Exemples de sites par métier — Le web du coin</title>
 <meta name="description" content="Démos de sites internet pour une boulangerie, un snack et un institut de beauté à Corbeil-Essonnes.">
 <link rel="canonical" href="https://lewebducoin.fr/exemples.html">
@@ -10,50 +10,71 @@
 <meta property="og:description" content="Démos de sites internet pour une boulangerie, un snack et un institut de beauté à Corbeil-Essonnes.">
 <meta property="og:image" content="https://lewebducoin.fr/assets/img/og-image.jpg">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0A0911">
+<meta name="theme-color" content="#0B0A12">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=3">
+<link rel="preload" href="assets/fonts/dm-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css?v=4">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Le web du coin","slogan":"Du pavé au pixel","url":"https://lewebducoin.fr","telephone":"+33766920291","email":"contact@lewebducoin.fr","areaServed":[{"@type": "City", "name": "Corbeil-Essonnes"}, {"@type": "City", "name": "Villabé"}, {"@type": "City", "name": "Ormoy"}, {"@type": "City", "name": "Soisy-sur-Seine"}, {"@type": "City", "name": "Étiolles"}, {"@type": "City", "name": "Grigny"}],"address":{"@type":"PostalAddress","addressLocality":"Corbeil-Essonnes","postalCode":"91100","addressCountry":"FR"},"sameAs":["https://www.instagram.com/lewebducoin/"]}</script>
 </head>
 <body>
-
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="header"><div class="wrap head-in">
-  <a class="brand" href="index.html"><img src="assets/img/embleme.webp" alt="" width="54" height="39"><span>Le web du coin</span></a>
-  <button class="nav-toggle" aria-expanded="false" aria-controls="menu"><span></span><b class="sr">Menu</b></button>
-  <nav aria-label="Menu principal"><ul class="nav" id="menu"><li><a href="index.html">Accueil</a></li><li><a href="offres.html">Offres</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="exemples.html" aria-current="page">Exemples</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li><li class="nav-tel"><a href="tel:+33766920291">07 66 92 02 91</a></li></ul></nav>
+  <a class="brand" href="index.html"><img src="assets/img/embleme.webp" alt="" width="44" height="32">Le web du coin</a>
+  <nav aria-label="Menu principal"><ul class="nav"><li><a href="index.html">Accueil</a></li><li><a href="offres.html">Offres</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="exemples.html" aria-current="page">Exemples</a></li><li><a href="automatisation.html">Automatisation</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li><li class="nav-tel"><a href="tel:+33766920291">07 66 92 02 91</a></li></ul></nav>
+  <button class="burger" aria-expanded="false" aria-controls="menu"><i></i><span class="sr">Menu</span></button>
 </div></header>
+<div class="menu" id="menu">
+  <nav aria-label="Menu"><ul><li><a href="index.html">Accueil</a></li><li><a href="offres.html">Offres</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="exemples.html" aria-current="page">Exemples</a></li><li><a href="automatisation.html">Automatisation</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+  <div class="menu-foot">
+    <p class="hand" style="font-size:1.6rem">Un message, et je passe vous voir.</p>
+    <div class="btns full"><a class="btn btn-main" href="tel:+33766920291"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>07 66 92 02 91</a><a class="btn btn-line" href="mailto:contact@lewebducoin.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Écrire un e-mail</a></div>
+  </div>
+</div>
 <main id="main">
-<section class="phero"><canvas class="pixels" data-density="14000" aria-hidden="true"></canvas><div class="wrap">
-  <p class="kicker" data-r="up">Exemples</p>
-  <h1 class="split">Et votre site,<br>à quoi il<br>ressemblerait ?</h1>
-  <p class="lead" data-r="up" style="--d:.3s">Trois démos de commerces fictifs, une par métier. Ouvrez-les sur votre téléphone : c'est là que vos clients vous cherchent.</p>
+<section class="phero"><canvas class="mosaique" data-front=".62" aria-hidden="true"></canvas><div class="wrap">
+  <p class="kicker">Exemples</p>
+  <h1>Et votre site, à quoi il ressemblerait ?</h1>
+  <p class="lead">Trois démos de commerces fictifs, une par métier. Ouvrez-les sur votre téléphone : c'est là que vos clients vous cherchent.</p>
 </div></section>
-<section class="reals-list"><div class="wrap"><article class="real" data-r="up" style="--d:0.0s"><a class="pola" href="demos/boulangerie/" target="_blank" rel="noopener" style="--rot:-2deg"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EBziyHkTYVRN5kBfrHhCi3jGxK/hf_20261015_201618_33df4977-7627-4d11-b6c3-2414c7d90219.png" alt="Aperçu de la démo La Mie Dorée" loading="lazy" width="960" height="540"><span class="hand">La Mie Dorée</span></a>
-<div><p class="kicker">Boulangerie · Pâtisserie</p><h3>La Mie Dorée</h3><p>Carte des incontournables avec prix, horaires du dimanche, commandes de gâteaux.</p><a class="lnk" href="demos/boulangerie/" target="_blank" rel="noopener">Voir la démo →</a></div></article><article class="real" data-r="up" style="--d:0.1s"><a class="pola" href="demos/snack/" target="_blank" rel="noopener" style="--rot:1.5deg"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EBziyHkTYVRN5kBfrHhCi3jGxK/hf_20261015_201619_a62c9a0f-467a-4142-8dce-23be6b2340b2.png" alt="Aperçu de la démo Le Spot" loading="lazy" width="960" height="540"><span class="hand">Le Spot</span></a>
-<div><p class="kicker">Snack · Burgers · Tacos</p><h3>Le Spot</h3><p>Carte complète, badge « ouvert maintenant », appel et itinéraire en un geste.</p><a class="lnk" href="demos/snack/" target="_blank" rel="noopener">Voir la démo →</a></div></article><article class="real" data-r="up" style="--d:0.2s"><a class="pola" href="demos/beaute/" target="_blank" rel="noopener" style="--rot:-1deg"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3EBziyHkTYVRN5kBfrHhCi3jGxK/hf_20261015_201619_db42220a-78bf-428e-8cad-3ae5ee5aa936.png" alt="Aperçu de la démo Atelier Nacre" loading="lazy" width="960" height="540"><span class="hand">Atelier Nacre</span></a>
-<div><p class="kicker">Onglerie · Soins beauté</p><h3>Atelier Nacre</h3><p>Prestations et tarifs, prise de rendez-vous par téléphone ou WhatsApp.</p><a class="lnk" href="demos/beaute/" target="_blank" rel="noopener">Voir la démo →</a></div></article>
-<p class="center" data-r="up">Votre métier n'est pas dans la liste ? Je vous prépare une démo à votre nom, gratuitement.</p></div></section>
-<section class="cta"><canvas class="pixels" data-density="16000" aria-hidden="true"></canvas><div class="wrap">
-  <p class="hand big" data-r="up">On en parle ?</p>
-  <h2 class="split xl">Autour<br>d'un café</h2>
-  <p class="lead" data-r="up" style="--d:.2s">Je passe dans votre boutique, on regarde ensemble ce dont vous avez besoin. Sans engagement.</p>
-  <div class="btns" data-r="up" style="--d:.35s"><a class="btn btn-main" href="tel:+33766920291">Appeler le 07 66 92 02 91</a><a class="btn btn-line" href="https://wa.me/33766920291?text=Bonjour%2C%20je%20souhaite%20des%20infos%20pour%20le%20site%20de%20mon%20commerce." rel="noopener">WhatsApp</a></div>
+<section style="padding-top:16px"><div class="wrap">
+  <p class="astuce astuce-tel" style="margin:0 0 6px">Glissez pour passer d'un métier à l'autre</p>
+  <div class="demos"><article class="demo">
+  <div class="phone"><div class="screen"><p class="wait">Chargement de la démo…</p><iframe data-src="demos/boulangerie/index.html" title="Démo : La Mie Dorée" tabindex="-1" aria-hidden="true"></iframe></div><a class="cover" href="demos/boulangerie/index.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo La Mie Dorée"></a></div>
+  <div><p class="kicker">Boulangerie · Pâtisserie</p><h3>La Mie Dorée</h3></div>
+  <p>Carte des incontournables avec prix, horaires du dimanche, commandes de gâteaux.</p>
+  <a class="btn btn-line" href="demos/boulangerie/index.html" target="_blank" rel="noopener">Voir la démo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</article><article class="demo">
+  <div class="phone"><div class="screen"><p class="wait">Chargement de la démo…</p><iframe data-src="demos/snack/index.html" title="Démo : Le Spot" tabindex="-1" aria-hidden="true"></iframe></div><a class="cover" href="demos/snack/index.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Le Spot"></a></div>
+  <div><p class="kicker">Snack · Burgers · Tacos</p><h3>Le Spot</h3></div>
+  <p>Carte complète, badge « ouvert maintenant », appel et itinéraire en un geste.</p>
+  <a class="btn btn-line" href="demos/snack/index.html" target="_blank" rel="noopener">Voir la démo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</article><article class="demo">
+  <div class="phone"><div class="screen"><p class="wait">Chargement de la démo…</p><iframe data-src="demos/beaute/index.html" title="Démo : Atelier Nacre" tabindex="-1" aria-hidden="true"></iframe></div><a class="cover" href="demos/beaute/index.html" target="_blank" rel="noopener" aria-label="Ouvrir la démo Atelier Nacre"></a></div>
+  <div><p class="kicker">Onglerie · Soins beauté</p><h3>Atelier Nacre</h3></div>
+  <p>Prestations et tarifs, prise de rendez-vous par téléphone ou WhatsApp.</p>
+  <a class="btn btn-line" href="demos/beaute/index.html" target="_blank" rel="noopener">Voir la démo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</article></div>
+  <div class="points"><button type="button" aria-label="Exemple 1 : La Mie Dorée" aria-current="true"><i></i></button><button type="button" aria-label="Exemple 2 : Le Spot" aria-current="false"><i></i></button><button type="button" aria-label="Exemple 3 : Atelier Nacre" aria-current="false"><i></i></button></div>
+  <p class="astuce">Votre métier n'est pas dans la liste ? Je vous prépare une démo à votre nom, gratuitement.</p>
+</div></section>
+<section class="cta"><canvas class="mosaique" data-front=".55" aria-hidden="true"></canvas><div class="wrap">
+  <p class="hand" data-r>On en parle ?</p>
+  <h2>Autour<br>d'un <span class="px">café</span></h2>
+  <p class="lead" data-r>Je passe dans votre boutique, on regarde ensemble ce dont vous avez besoin. Sans engagement.</p>
+  <div class="btns" data-r><a class="btn btn-main" href="tel:+33766920291"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler le 07 66 92 02 91</a><a class="btn btn-line" href="https://wa.me/33766920291?text=Bonjour%2C%20je%20souhaite%20des%20infos%20pour%20le%20site%20de%20mon%20commerce." rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z"/></svg>WhatsApp</a></div>
 </div></section>
 </main>
 <footer class="footer">
-  <div class="band" aria-hidden="true"><div class="band-in">Corbeil-Essonnes · Villabé · Ormoy · Soisy-sur-Seine · Étiolles · Grigny · Ris-Orangis · Évry · Saint-Germain-lès-Corbeil · Corbeil-Essonnes · Villabé · Ormoy · Soisy-sur-Seine · Étiolles · Grigny · Ris-Orangis · Évry · Saint-Germain-lès-Corbeil ·</div></div>
+  <div class="band" aria-hidden="true"><div class="band-in"><span>Corbeil-Essonnes</span><span aria-hidden="true">·</span><span>Villabé</span><span aria-hidden="true">·</span><span>Ormoy</span><span aria-hidden="true">·</span><span>Soisy-sur-Seine</span><span aria-hidden="true">·</span><span>Étiolles</span><span aria-hidden="true">·</span><span>Grigny</span><span aria-hidden="true">·</span><span>Ris-Orangis</span><span aria-hidden="true">·</span><span>Évry</span><span aria-hidden="true">·</span><span>Saint-Germain-lès-Corbeil</span><span aria-hidden="true">·</span><span>Corbeil-Essonnes</span><span aria-hidden="true">·</span><span>Villabé</span><span aria-hidden="true">·</span><span>Ormoy</span><span aria-hidden="true">·</span><span>Soisy-sur-Seine</span><span aria-hidden="true">·</span><span>Étiolles</span><span aria-hidden="true">·</span><span>Grigny</span><span aria-hidden="true">·</span><span>Ris-Orangis</span><span aria-hidden="true">·</span><span>Évry</span><span aria-hidden="true">·</span><span>Saint-Germain-lès-Corbeil</span><span aria-hidden="true">·</span></div></div>
   <div class="wrap foot-in">
     <div><p class="foot-logo">Le web du coin</p><p class="hand">Du pavé au pixel</p></div>
-    <div><p class="foot-h">Contact</p><p><a href="tel:+33766920291">07 66 92 02 91</a><br><a href="mailto:contact@lewebducoin.fr">contact@lewebducoin.fr</a><br><a href="https://www.instagram.com/lewebducoin/" rel="noopener">Instagram @lewebducoin</a></p></div>
-    <div><p class="foot-h">Le site</p><p><a href="index.html">Accueil</a><br><a href="offres.html">Offres</a><br><a href="realisations.html">Réalisations</a><br><a href="exemples.html">Exemples</a><br><a href="a-propos.html">À propos</a><br><a href="contact.html">Contact</a><br><a href="mentions-legales.html">Mentions légales</a></p></div>
+    <div><p class="foot-h">Contact</p><ul><li><a href="tel:+33766920291">07 66 92 02 91</a></li><li><a href="mailto:contact@lewebducoin.fr">contact@lewebducoin.fr</a></li><li><a href="https://www.instagram.com/lewebducoin/" rel="noopener">Instagram @lewebducoin</a></li></ul></div>
+    <div><p class="foot-h">Le site</p><ul><li><a href="index.html">Accueil</a></li><li><a href="offres.html">Offres</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="exemples.html">Exemples</a></li><li><a href="automatisation.html">Automatisation</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul></div>
   </div>
   <p class="wrap foot-copy">© 2026 Le web du coin · Sites internet pour les commerces et artisans de Corbeil-Essonnes et alentours</p>
 </footer>
-<a class="fab" href="https://wa.me/33766920291?text=Bonjour%2C%20je%20souhaite%20des%20infos%20pour%20le%20site%20de%20mon%20commerce." aria-label="Écrire sur WhatsApp" rel="noopener">💬</a>
-
-<script src="assets/js/main.js?v=3"></script>
+<div class="barre"><a class="btn btn-main" href="tel:+33766920291"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a><a class="btn btn-wa" href="https://wa.me/33766920291?text=Bonjour%2C%20je%20souhaite%20des%20infos%20pour%20le%20site%20de%20mon%20commerce." rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z"/></svg>WhatsApp</a></div>
+<script src="assets/js/main.js?v=4" defer></script>
 </body>
 </html>
