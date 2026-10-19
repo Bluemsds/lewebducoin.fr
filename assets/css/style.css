@@ -102,6 +102,78 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .btn-wa{background:#1FAF5A;color:#04160B}
 .menu-open .barre{transform:translateY(110%)}
 
+/* Assistant IA (widget n8n) : bulle au-dessus de la barre sur téléphone, couleurs du site
+   (variables posées aussi sur #n8n-chat pour passer devant la feuille du widget, chargée après) */
+:root,#n8n-chat{
+  --chat-bas:calc(var(--barre) + 14px);
+  --chat--window--bottom:var(--chat-bas);
+  --chat--window--right:max(14px,env(safe-area-inset-right,0px));
+  --chat--window--width:380px;
+  --chat--window--height:560px;
+  --chat--window--z-index:44;
+  --chat--window--border:1px solid var(--trait);
+  --chat--border-radius:18px;
+  --chat--font-family:var(--f-txt);
+  --chat--color--primary:var(--mauve);
+  --chat--color--primary-shade-50:var(--mauve-f);
+  --chat--color--primary--shade-100:var(--mauve-f);
+  --chat--color--secondary:var(--mauve-f);
+  --chat--color-secondary-shade-50:var(--mauve-f);
+  --chat--color-white:var(--craie);
+  --chat--color-light:var(--nuit-2);
+  --chat--color-light-shade-50:var(--nuit-3);
+  --chat--color-light-shade-100:var(--trait);
+  --chat--color-medium:var(--gris);
+  --chat--color-dark:var(--craie);
+  --chat--color-typing:var(--gris);
+  --chat--header--background:var(--nuit-3);
+  --chat--header--color:var(--craie);
+  --chat--header--border-bottom:1px solid var(--trait);
+  --chat--header--padding:16px 20px;
+  --chat--heading--font-size:1.4em;
+  --chat--subtitle--font-size:.92em;
+  --chat--subtitle--line-height:1.45;
+  --chat--body--background:var(--nuit-2);
+  --chat--footer--background:var(--nuit-2);
+  --chat--footer--color:var(--gris);
+  --chat--footer--border-top:1px solid var(--trait);
+  --chat--message--font-size:.98rem;
+  --chat--message--bot--background:var(--nuit-3);
+  --chat--message--bot--color:var(--craie);
+  --chat--message--bot--border:1px solid var(--trait);
+  --chat--message--user--background:var(--mauve);
+  --chat--message--user--color:#140A1C;
+  --chat--message--user--border:none;
+  --chat--message--pre--background:var(--nuit);
+  --chat--input--background:var(--nuit);
+  --chat--input--text-color:var(--craie);
+  --chat--input--border:0;
+  --chat--input--container--background:var(--nuit);
+  --chat--input--send--button--background:transparent;
+  --chat--input--send--button--color:var(--mauve);
+  --chat--input--send--button--background-hover:transparent;
+  --chat--input--send--button--color-hover:var(--lilas);
+  --chat--button--background--primary:var(--mauve);
+  --chat--button--color--primary:#140A1C;
+  --chat--button--background--primary--hover:var(--lilas);
+  --chat--toggle--size:56px;
+  --chat--toggle--width:56px;
+  --chat--toggle--height:56px;
+  --chat--toggle--background:var(--mauve);
+  --chat--toggle--hover--background:var(--lilas);
+  --chat--toggle--active--background:var(--mauve-f);
+  --chat--toggle--color:#140A1C;
+}
+.chat-bulle{position:fixed;right:var(--chat--window--right);bottom:var(--chat-bas);z-index:44;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--mauve);color:#140A1C;box-shadow:0 10px 30px -8px color-mix(in srgb,var(--mauve) 70%,transparent);transition:transform .2s var(--ease),background .2s,opacity .2s;-webkit-tap-highlight-color:transparent}
+.chat-bulle svg{width:26px;height:26px}
+.chat-bulle:hover{background:var(--lilas);transform:scale(1.05)}
+.chat-bulle[aria-busy="true"]{opacity:.6;pointer-events:none}
+.chat-bulle[hidden]{display:none}
+.chat-window-toggle{box-shadow:0 10px 30px -8px color-mix(in srgb,var(--mauve) 70%,transparent)}
+.chat-layout .chat-header h1{font-weight:500;letter-spacing:-.03em}
+.chat-layout .chat-inputs textarea::placeholder{color:var(--gris)}
+.menu-open .chat-bulle,.menu-open .chat-window-wrapper{visibility:hidden}
+
 /* Accueil : hero */
 .hero{position:relative;overflow:hidden;padding-block:40px 64px;isolation:isolate}
 .hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
@@ -306,6 +378,7 @@ a.offre:hover{border-color:var(--mauve)}
   body{padding-bottom:0}
   section{padding-block:110px}
   .barre{display:none}
+  :root,#n8n-chat{--chat-bas:24px;--chat--window--right:24px}
   .burger,.menu{display:none}
   .nav{display:flex;align-items:center;gap:4px;list-style:none}
   .nav a{display:block;padding:10px 12px;border-radius:10px;text-decoration:none;font-size:.95rem;color:#D3CFDD}

@@ -223,4 +223,52 @@
     zone.addEventListener('touchstart', touche, { passive: true });
   }
   doc.querySelectorAll('canvas.mosaique').forEach(mosaique);
+
+  /* Assistant IA (n8n) : rien n'est chargé avant le premier clic sur la bulle */
+  var bulle = doc.querySelector('.chat-bulle');
+  if (bulle) bulle.addEventListener('click', function () {
+    var cdn = 'https://cdn.jsdelivr.net/npm/@n8n/chat@' + bulle.dataset.version + '/dist/';
+    bulle.setAttribute('aria-busy', 'true');
+    var css = doc.createElement('link');
+    css.rel = 'stylesheet'; css.href = cdn + 'style.css';
+    doc.head.appendChild(css);
+    var cible = doc.createElement('div');
+    cible.id = 'n8n-chat';
+    body.appendChild(cible);
+    import(cdn + 'chat.bundle.es.js').then(function (m) {
+      m.createChat({
+        webhookUrl: bulle.dataset.webhook,
+        target: '#n8n-chat',
+        mode: 'window',
+        loadPreviousSession: true,
+        showWelcomeScreen: false,
+        defaultLanguage: 'en', /* seule langue acceptée par le widget : les textes ci-dessous sont en français */
+        initialMessages: [
+          'Bonjour ! Je suis l\u2019assistant du Web du coin.',
+          'Une question sur un site pour votre commerce, les tarifs ou les délais ? Écrivez-la ici. Pour parler directement à David : 07 66 92 02 91.'
+        ],
+        i18n: { en: {
+          title: 'Bonjour 👋',
+          subtitle: 'L\u2019assistant IA du Web du coin répond à vos questions, jour et nuit.',
+          footer: 'Réponses générées par une IA',
+          getStarted: 'Nouvelle conversation',
+          inputPlaceholder: 'Écrivez votre question…',
+          closeButtonTooltip: 'Fermer',
+          repostButton: 'Renvoyer le message',
+          reuseButton: 'Réutiliser le message'
+        } }
+      });
+      /* La bulle du widget prend la place de la nôtre, puis on ouvre la fenêtre */
+      var ouvre = function (n) {
+        var t = doc.querySelector('#n8n-chat .chat-window-toggle');
+        if (t) { bulle.hidden = true; t.click(); }
+        else if (n < 40) setTimeout(function () { ouvre(n + 1); }, 50);
+      };
+      ouvre(0);
+    }).catch(function () {
+      bulle.removeAttribute('aria-busy');
+      cible.remove();
+      location.href = 'contact.html';
+    });
+  });
 })();
